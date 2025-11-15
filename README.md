@@ -12,10 +12,26 @@ To start using them, you need to include the JavaScript script in your website o
 
 ```
 
+
+
+You should also add this script at the bottom of the page.
+`emoji-container` is the class that contains the text with emojis.
+
+```html
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const posts = document.querySelectorAll('.emoji-container');
+        posts.forEach(post => {
+            dkmoji.parse(post);
+        });
+    });
+</script>
+```
+
 By default, all images are sized 72x72!  
 To adjust the height and width of the emojis, use the following CSS:
 
-```css
+```html
 <style>
     .DKmoji {
         width: 17px;  
