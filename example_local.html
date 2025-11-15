@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Emodji</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .emoji-container {
+            display: grid;
+            grid-template-columns: repeat(5, 100px);
+            gap: 20px;
+        }
+        .emoji {
+            font-size: 50px;
+            text-align: center;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+      
+    </style>
+</head>
+<body>
+  <style>
+    .DKmoji {
+        width: 25px;  
+        height: 25px; 
+    }
+</style>
+    <div class="emoji-container">
+        <div class="emoji">😀</div>
+        <div class="emoji">😂</div>
+        <div class="emoji">😍</div>
+        <div class="emoji">🥳</div>
+        <div class="emoji">😎</div>
+        <div class="emoji">🤔</div>
+        <div class="emoji">🤗</div>
+        <div class="emoji">😜</div>
+        <div class="emoji">😇</div>
+        <div class="emoji">😋</div>
+        <div class="emoji">🙃</div>
+        <div class="emoji">😱</div>
+        <div class="emoji">😴</div>
+        <div class="emoji">😷</div>
+        <div class="emoji">🧐</div>
+        <div class="emoji">😵</div>
+        <div class="emoji">🤯</div>
+        <div class="emoji">💖</div>
+        <div class="emoji">🌟</div>
+        <div class="emoji">🎉</div>
+    </div>
+</body>
+  <script src="dkmoji.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const posts = document.querySelectorAll('.emoji-container');
+        posts.forEach(post => {
+            dkmoji.parse(post);
+        });
+    });
+</script>
+</html>
